@@ -1,0 +1,25 @@
+package messages;
+
+struct trajectory
+{
+    int16_t mpc_step;
+    int16_t step;
+    int16_t id;
+    double states[31];
+    double adjoint[31];
+}
+
+struct control
+{
+    int64_t timestamp;
+    int16_t id;
+    double control;
+}
+
+
+struct plantState
+{
+    int64_t timestamp;
+    int64_t step;
+    double states[3];
+}
